@@ -12,31 +12,18 @@ export default function Services() {
     "AI/ML Development"
   ];
 
-  const toolBoxItems = [
-    "TailwindCSS",
-    "NextJS",
-    "Firebase",
-    "React Native",
-    "AWS",
-    "PostgreSQL"
-  ];
-
   return (
     <section id="services" className="my-[10%]" aria-label="services">
       <Heading title="services" />
       <div className="space-y-14">
         <ServiceUi
-          title="our expertises."
-          description="We focus on all things design and web related. With each of my
-          services, my goal is to deliver an impactful and elevating
-          digital experience for everyone."
+          title={
+            <>Our expertises<span style={{ color: "#b60000" }}>.</span></> // Apply color to the full stop
+          }
+          description="We focus on all things design and web-related, crafting innovative solutions that bring your vision to life. Whether it's web development, app design, or digital strategy, our approach is centered on delivering impactful and elevating experiences that resonate with users and drive measurable results."
+          description1="We start with a personalized consultation to align with your goals, crafting tailored, user-centered solutions. From development to design, we ensure seamless execution. Our marketing services boost your digital presence, driving growth and impact. With a global reach, we provide continuous support, empowering your brand anytime, anywhere."
           items={expertiseItems}
         />
-        {/* <ServiceUi
-          title="our digital tool box."
-          description="These are our go to tech stack to make any projects happen."
-          items={toolBoxItems}
-        /> */}
       </div>
     </section>
   );

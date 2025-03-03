@@ -3,11 +3,13 @@ import { ScrollTrigger } from "gsap/all";
 import {useRef, useEffect} from "react"
 
 
-export default function ServiceUi({ title, description, items }) {
+export default function ServiceUi({ title, description, description1, items }) {
 
   const serviceUi = useRef(null)
   const heading = useRef(null)
   const body = useRef(null)
+  const body1 = useRef(null)
+
   const services = useRef(null)
   const line = useRef(null)
 
@@ -21,6 +23,8 @@ export default function ServiceUi({ title, description, items }) {
         .timeline()
         .to(heading.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0)
         .to(body.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2)
+        .to(body1.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25 }, 0.2)
+
         .to (line.current, { width: "100%", ease: "power4.inOut", duration: 1.5 }, 0.2)
         .to(services.current, { opacity: 1, y: 0, ease: "power4.out", duration: 1.25}, 0.5),
 
@@ -39,6 +43,9 @@ export default function ServiceUi({ title, description, items }) {
             {title}
           </h3>
           <p ref={body} className="max-w-md xl:max-w-2xl text-body-1 2xl:text-3xl  translate-y-10 opacity-0">{description}</p>
+          <br />
+          <p ref={body1} className="max-w-md xl:max-w-2xl text-body-1 2xl:text-3xl  translate-y-10 opacity-0">{description1}</p>
+
         </div>
         <div ref={line} className="h-1 w-0 bg-accent-100 opacity-50 md:hidden"></div>
       </div>

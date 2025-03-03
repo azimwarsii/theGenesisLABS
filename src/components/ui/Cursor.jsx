@@ -7,7 +7,6 @@ export default function Cursor() {
   const svg = useRef(null);
 
   useEffect(() => {
-    // TODO Learn useContext and useRef here
     const images = document.querySelectorAll(".img");
 
     const tl = gsap.timeline({ paused: true });
@@ -26,8 +25,8 @@ export default function Cursor() {
       img.addEventListener("mouseleave", function () {
         tl.reverse();
         tl.eventCallback("onReverseComplete", function () {
-          gsap.set(svg.current, { opacity: 0 }); // Hide the SVG element
-          gsap.set(curs.current, { height: "12px", width:"12px" }); // Hide the SVG element
+          gsap.set(svg.current, { opacity: 0 });
+          gsap.set(curs.current, { height: "12px", width:"12px" });
         });
       });
     });
@@ -47,8 +46,12 @@ export default function Cursor() {
   return (
     <div
       ref={curs}
-      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-secondary-600 sm:flex"
-      style={{ left: `${x}px`, top: `${y}px` }}
+      className="cursor pointer-events-none fixed left-1/2 top-1/2 z-[999] hidden h-3 w-3 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full sm:flex"
+      style={{
+        left: `${x}px`,
+        top: `${y}px`,
+        backgroundColor: "#b60000", // Set cursor color here
+      }}
     >
       <svg
         ref={svg}

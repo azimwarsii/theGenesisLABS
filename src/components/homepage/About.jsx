@@ -33,7 +33,6 @@ export default function About() {
   }, [aboutSection]);
 
   return (
-    // Try using max width to contain the size of the container
     <section ref={aboutSection} aria-label="about us">
       <Heading title="about us" />
       <div className="mt-10 flex flex-col items-start gap-8 md:flex-row lg:gap-10 ">
@@ -54,23 +53,14 @@ export default function About() {
               ref={heading}
               className="translate-y-10 text-heading-3 2xl:text-7xl font-semibold leading-tight opacity-0"
             >
-              A brief intro, who we are?
+              A brief intro, who we are
+              <span style={{ color: "#b60000" }}>?</span>
             </h3>
             <p ref={body} className=" translate-y-10 text-body-1 2xl:text-4xl opacity-0">
-            We are a dynamic web agency with teams in Canada, Rome, and India, specializing in innovative, high-performance web and mobile applications. Our experts craft exceptional digital experiences, empowering startups and businesses to elevate their online presence and achieve their goals. 
+              We are a dynamic web agency with expert teams in Canada, Italy, and India, specializing in high-performance web and mobile applications. Our robust solutions empower startups and businesses to scale, innovate, and excel in the digital space.
             
-              <br></br>
-              <br></br>We develop engaging web and mobile applications that inspire users, empowering startups and businesses to meet industry standards and make a lasting impact in the digital world.
-              {/* <br></br>
-              <br></br>
-              When I am not developing or designing, I enjoy creating videos
-              that talk about frontend development, productivity and design on{" "}
-              <a
-                className="underline duration-300 ease-in-out hover:text-secondary-700"
-                href="https://www.youtube.com/channel/UCBOAB9RV647G93GxLhEXleA"
-              >
-                YouTube 📸
-              </a> */}
+              <br />
+              <br />With a strong focus on technology and user engagement, we craft seamless digital experiences that drive growth, enhance usability, and set new industry standards, helping brands make a lasting impact.
             </p>
           </div>
         </div>
