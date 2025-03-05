@@ -56,15 +56,7 @@ export default function NavBar({ sectionRefs }) {
     >
       {/* logo */}
       <a href="#hero" aria-label="Logo" className="z-50">
-        <svg
-          ref={logo}
-          width="80"
-          height="45"
-          viewBox="0 0 121 45"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-         <path d="M0 37.65L0 23.10L30.80 23.10L30.80 37.65L24.70 37.65L24.70 57.65L6 57.65L6 37.65L0 37.65ZM52.75 38.70L52.75 44.80L54.75 44.80L54.75 41.35L66.55 40.90L66.55 57.65Q61.20 58.10 52.17 58.10Q43.15 58.10 38.42 53.55Q33.70 49 33.70 40.05Q33.70 31.10 38.35 26.90Q43 22.70 52.20 22.70Q55.85 22.70 59.35 23.05Q62.85 23.40 64.55 23.75L66.20 24.10L66.20 38.70L52.75 38.70ZM69.45 23.10L86.65 23.10L86.65 44.80L91.75 44.80L91.75 57.65L69.45 57.65L69.45 23.10Z"/></svg>
+        <img src="\src\assets\images\logo.png" ref={logo} width={160} height={20}></img>
       </a>
       <nav className=" space-x-7 font-grotesk text-body-3 sm:block">
         <a href="#about" className="group relative hidden md:inline-block">
