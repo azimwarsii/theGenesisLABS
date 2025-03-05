@@ -56,7 +56,7 @@ export default function NavBar({ sectionRefs }) {
     >
       {/* logo */}
       <a href="#hero" aria-label="Logo" className="z-50">
-        <img src="\src\assets\images\logo.png" ref={logo} width={160} height={20}></img>
+        <img src="/src/assets/images/logo.png" ref={logo} width={100}></img>
       </a>
       <nav className=" space-x-7 font-grotesk text-body-3 sm:block">
         <a href="#about" className="group relative hidden md:inline-block">
