@@ -248,9 +248,9 @@ export default function Contact() {
           <div className="space-y-3">
             <h4 className="text-body-1 2xl:text-4xl font-semibold">Current Times</h4>
             <div className="space-y-3 text-body-2 2xl:text-3xl">
-              <p>Kolkata, India: {kolkataTime}</p>
-              <p>Rome, Italy: {italyTime}</p>
               <p>Toronto, Canada: {canadaTime}</p>
+              <p>Rome, Italy: {italyTime}</p>
+              <p>Kolkata, India: {kolkataTime}</p>
             </div>
           </div>
         </div>
