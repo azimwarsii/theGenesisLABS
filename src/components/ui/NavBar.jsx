@@ -1,14 +1,14 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import Lenis from "@studio-freight/lenis";
 import logo1 from "../../assets/images/logoGrey.png";
-
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 export default function NavBar({ sectionRefs }) {
   const navBar = useRef(null);
-  const logo = useRef(null);
   const cta = useRef(null);
+  const [language, setLanguage] = useState("en"); // State to manage selected language
   const tl = gsap.timeline();
   gsap.registerPlugin(ScrollTrigger);
 
@@ -30,14 +30,12 @@ export default function NavBar({ sectionRefs }) {
     });
   });
 
-
   useEffect(() => {
     sectionRefs.forEach((section) => {
       ScrollTrigger.create({
         trigger: section,
         start: "top 375px",
         end: "bottom 300px",
-        // markers: true,
         animation: gsap
           .timeline()
           .to(navBar.current, { color: "#DDDDD5" })
@@ -47,8 +45,13 @@ export default function NavBar({ sectionRefs }) {
         toggleActions: "restart reverse restart reverse",
       });
     });
-
   });
+
+  const handleLanguageChange = (e) => {
+    setLanguage(e.target.value);
+    // Implement your language change logic here
+    console.log(`Language changed to: ${e.target.value}`);
+  };
 
   return (
     <header
@@ -57,9 +60,9 @@ export default function NavBar({ sectionRefs }) {
     >
       {/* logo */}
       <a href="#hero" aria-label="Logo" className="z-50">
-        <img src={logo1}  width={80}></img>
+        <img src={logo1} width={80} alt="Logo" />
       </a>
-      <nav className=" space-x-7 font-grotesk text-body-3 sm:block">
+      <nav className="space-x-7 font-grotesk text-body-3 sm:block">
         <a href="#about" className="group relative hidden md:inline-block">
           <span>about</span>
           <span className="absolute bottom-0 left-0 h-[0.125em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
@@ -82,7 +85,21 @@ export default function NavBar({ sectionRefs }) {
             <span>Let&apos;s Talk.</span>
           </span>
         </a>
+
+        {/* Language Dropdown */}
+        <div className="relative inline-block">
+          <select
+            value={language}
+            onChange={handleLanguageChange}
+            className="bg-transparent text-body-3 border border-secondary-600 py-2 px-3 rounded-md focus:outline-none"
+          >
+            <option value="en">English</option>
+            <option value="it">Italian</option>
+            <option value="fr">French</option>
+          </select>
+        </div>
       </nav>
     </header>
   );
+  
 }

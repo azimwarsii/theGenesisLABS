@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, } from "react";
 // import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/ui/NavBar";
@@ -12,8 +12,9 @@ import Works from "./components/homepage/Works";
 import Contact from "./components/homepage/Contact";
 import Footer from "./components/ui/Footer";
 
+
 const App = () => {
- 
+  
   gsap.registerPlugin(ScrollTrigger);
 
   const sectionRefs = useRef([]); // Creating a sectionRefs array
@@ -54,7 +55,7 @@ const App = () => {
       <main className="px-5 md:px-10 xl:px-20 2xl:px-28">
         <Role forwardedRef={(el) => (sectionRefs.current[0] = el)} />{" "}
         {/* forwardedRef props to pass into the child component to access the ref, then this will go into the useRef array  */}
-        <About />
+        <About/>
         <Services />
         <Works forwardedRef={(el) => (sectionRefs.current[1] = el)} />
         <Contact />

@@ -89,7 +89,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="my-[10%] overflow-hidden" aria-label="contact me">
-      <div id="simpleToast" className="justify-center	">
+      <div id="simpleToast" className="justify-center">
         🔥<span>Message Sent</span>
       </div>
 
@@ -97,11 +97,10 @@ export default function Contact() {
       <div ref={contactSection} className="mt-10 flex flex-col gap-20 md:grid md:grid-cols-6 md:px-12">
         <div className="col-span-4">
           <h3 ref={heading} className="max-w-lg 2xl:max-w-3xl text-heading-3 2xl:text-7xl font-semibold leading-tight translate-y-10 opacity-0">
-            Have an awesome idea<span style={{ color: "#b60000" }}>?</span> Let&apos;s bring it to
-            life<span style={{ color: "#b60000" }}>.</span>
+            Have an awesome idea<span style={{ color: "#b60000" }}>?</span> Let&apos;s bring it to life<span style={{ color: "#b60000" }}>.</span>
           </h3>
           <p ref={body} className="mt-4 max-w-md 2xl:max-w-2xl text-body-2 2xl:text-4xl text-accent-100 translate-y-10 opacity-0">
-            We are currently available for freelance work. 
+            We are currently available for freelance work.
           </p>
           <form
             name="contact"
@@ -219,9 +218,25 @@ export default function Contact() {
           <div className="space-y-3">
             <h4 className="text-body-1 2xl:text-4xl font-semibold">Our Digital Spaces</h4>
             <div className="space-y-3 text-body-2 2xl:text-3xl">
+              
+              
+              {/* Added Instagram link */}
               <a
-                href="https://www.linkedin.com/in/thegenesislabs/"
-                className="group group flex w-fit items-center space-x-2"
+                href="https://www.instagram.com/thegenesislabs.tgl/"
+                className="group flex items-center space-x-2"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <Icon icon="mdi:instagram" color="#666" />
+                <div className="relative">
+                  <span>Instagram</span>
+                  <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
+                </div>
+              </a>
+              {/* Added LinkedIn (Company) link */}
+              <a
+                href="https://www.linkedin.com/company/106646814/"
+                className="group flex items-center space-x-2"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -231,6 +246,7 @@ export default function Contact() {
                   <span className="absolute bottom-0 left-0 h-[0.12em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
+              
               <a
                 href="https://www.youtube.com/@thegenesislabs"
                 className="group flex items-center space-x-2"
@@ -243,6 +259,7 @@ export default function Contact() {
                   <span className="absolute bottom-0 left-0 h-[0.10em] w-0 rounded-full bg-secondary-600 duration-300 ease-in-out group-hover:w-full"></span>
                 </div>
               </a>
+             
             </div>
           </div>
           <div className="space-y-3">

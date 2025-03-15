@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import { useRef, useEffect } from "react";
 import heroImg from "/src/assets/images/heroimg.webp";
 
+
 export default function Hero() {
   const img = useRef(null);
   const imgContainer = useRef(null);
@@ -73,3 +74,4 @@ export default function Hero() {
     </section>
   );
 }
+

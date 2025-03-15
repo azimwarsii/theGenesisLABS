@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
 import Heading from "../ui/Heading";
 
+
 export default function About() {
   const profile = useRef(null);
   const aboutSection = useRef(null);
@@ -68,3 +69,4 @@ export default function About() {
     </section>
   );
 }
+
